@@ -3,4 +3,5 @@
 
 body{
   user-select: none;
+  font-family: "Fira Code", "JetBrains Mono", "Source Code Pro", monospace;
 }
