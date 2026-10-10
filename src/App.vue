@@ -427,7 +427,7 @@ const getPlatformName = (p: string) => {
     <!-- Footer -->
     <footer class="border-t border-slate-200 dark:border-slate-800 py-6 text-center text-xs text-slate-500 dark:text-slate-400">
       <div class="max-w-7xl mx-auto px-4">
-        <p>© {{ new Date().getFullYear() }} Project Portfolio. Built with Vue 3, Vite, Vue I18n & Tailwind CSS.</p>
+        <p>Copyright © {{ new Date().getFullYear() }} ZhouC</p>
       </div>
     </footer>
   </div>
