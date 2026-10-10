@@ -1,0 +1,53 @@
+[
+  {
+    "name": "Server Express",
+    "github": "https://github.com/Zhoucheng133/Server-Express",
+    "appstore": "https://apps.apple.com/us/app/server-express/id6818531674",
+    "msstore": "https://apps.microsoft.com/detail/9nxl2mp4v7mz?",
+    "icon": "/apps/express.png",
+    "language": [
+      "en-us",
+      "zh-cn",
+      "zh-tw"
+    ],
+    "framework": "Flutter",
+    "platform": [
+      "d",
+      "m"
+    ],
+    "components": [
+      {
+        "name": "core",
+        "framework": "Go",
+        "github": "https://github.com/Zhoucheng133/Server-Express-Core"
+      }
+    ],
+    "detail": {
+      "en": "A simple and quick SFTP client",
+      "cn": "一个简单快捷的SFTP客户端"
+    }
+  },
+  {
+    "name": "Anime Helper",
+    "github": "https://github.com/Zhoucheng133/Anime-Helper",
+    "icon": "/apps/helper.svg",
+    "language": [
+      "zh-cn"
+    ],
+    "framework": "ElysiaJS",
+    "platform": [
+      "s"
+    ],
+    "components": [
+      {
+        "name": "web",
+        "framework": "Vue",
+        "github": "https://github.com/Zhoucheng133/Anime-Helper-UI"
+      }
+    ],
+    "detail": {
+      "en": "Animation Follow & Download Tool",
+      "cn": "一个追番和下载番剧的工具"
+    }
+  }
+]
