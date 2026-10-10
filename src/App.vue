@@ -366,7 +366,10 @@ const getPlatformName = (p: string) => {
                 :title="t('msStore')"
               >
                 <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M0 3.445l9.088-1.25v9.062H0V3.445zm0 17.11l9.088 1.25V12.06H0v8.495zm10.741-18.49L24 0v11.237H10.741V2.065zm0 19.87L24 24V12.763H10.741V21.935z"/>
+                  <rect x="2" y="2" width="9.5" height="9.5" />
+                  <rect x="12.5" y="2" width="9.5" height="9.5" />
+                  <rect x="2" y="12.5" width="9.5" height="9.5" />
+                  <rect x="12.5" y="12.5" width="9.5" height="9.5" />
                 </svg>
                 <span>MS Store</span>
               </a>
