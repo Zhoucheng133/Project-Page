@@ -3,6 +3,7 @@
     "name": "netPlayer",
     "github": "https://github.com/Zhoucheng133/netPlayer-Next",
     "icon": "/apps/netplayer.svg",
+    "msstore": "https://apps.microsoft.com/detail/9nfmtfpz1zct?referrer=appbadge&mode=direct",
     "language": [
       "en-us",
       "zh-cn",
@@ -14,13 +15,6 @@
     ],
     "enabled": true,
     "type": "application",
-    "components": [
-      {
-        "name": "app",
-        "framework": "Flutter",
-        "github": "https://github.com/Zhoucheng133/netPlayer-Next"
-      }
-    ],
     "detail": {
       "en": "Subsonic & Navidrome based Music Player",
       "cn": "基于 Subsonic & Navidrome 的音乐播放器"
@@ -30,8 +24,16 @@
     "name": "netPlayer Mobile",
     "github": "https://github.com/Zhoucheng133/netPlayer-Mobile",
     "icon": "/apps/netplayer.svg",
+    "appstore": "https://apps.apple.com/us/app/netplayer-mobile/id6817419441",
     "language": [
+      "de-de",
       "en-us",
+      "es-es",
+      "fr-fr",
+      "jp-jp",
+      "ko-kr",
+      "pt-pt",
+      "ru-ru",
       "zh-cn",
       "zh-tw"
     ],
@@ -42,7 +44,7 @@
     "enabled": true,
     "type": "application",
     "detail": {
-      "en": "Subsonic & Navidrome based Music Player",
+      "en": "Subsonic & Navidrome based Music Player For Mobile",
       "cn": "基于 Subsonic & Navidrome 的音乐播放器 (移动端)"
     }
   },
@@ -50,6 +52,7 @@
     "name": "Sharer",
     "github": "https://github.com/Zhoucheng133/Sharer-App",
     "icon": "/apps/sharer.svg",
+    "msstore": "https://apps.microsoft.com/detail/9n4xj4w1ch2h?referrer=appbadge&mode=direct",
     "language": [
       "en-us",
       "zh-cn",
@@ -62,11 +65,6 @@
     "enabled": true,
     "type": "application",
     "components": [
-      {
-        "name": "app",
-        "framework": "Flutter",
-        "github": "https://github.com/Zhoucheng133/Sharer-App"
-      },
       {
         "name": "core",
         "framework": "Gin",
@@ -100,11 +98,6 @@
     "type": "application",
     "components": [
       {
-        "name": "app",
-        "framework": "Flutter",
-        "github": "https://github.com/Zhoucheng133/Sharer-Mobile"
-      },
-      {
         "name": "core",
         "framework": "Gin",
         "github": "https://github.com/Zhoucheng133/Sharer-Core"
@@ -116,7 +109,7 @@
       }
     ],
     "detail": {
-      "en": "File Sharing Tool",
+      "en": "File Sharing Tool For Mobile",
       "cn": "文件共享工具 (移动端)"
     }
   },
@@ -124,6 +117,7 @@
     "name": "DAV Server",
     "github": "https://github.com/Zhoucheng133/DAV-Server",
     "icon": "/apps/dav.svg",
+    "msstore": "https://apps.microsoft.com/detail/9nh45rp8h8rl?referrer=appbadge&mode=direct",
     "language": [
       "en-us",
       "zh-cn",
@@ -137,27 +131,31 @@
     "type": "application",
     "components": [
       {
-        "name": "app",
-        "framework": "Flutter",
-        "github": "https://github.com/Zhoucheng133/DAV-Server"
-      },
-      {
         "name": "core",
         "framework": "Go",
         "github": "https://github.com/Zhoucheng133/DAV-Core"
       }
     ],
     "detail": {
-      "en": "WebDAV Server",
-      "cn": "WebDAV 服务端"
+      "en": "A Tool for Launching WebDAV with an App",
+      "cn": "使用 App 启动 WebDAV 的工具"
     }
   },
   {
     "name": "BitFlow",
     "github": "https://github.com/Zhoucheng133/BitFlow",
     "icon": "/apps/bitflow.png",
+    "appstore": "https://apps.apple.com/us/app/bitflow-app/id6818530251",
+    "msstore": "https://apps.microsoft.com/detail/9np0mgsll0zf?referrer=appbadge&mode=direct",
     "language": [
+      "de-de",
       "en-us",
+      "es-es",
+      "fr-fr",
+      "jp-jp",
+      "ko-kr",
+      "pt-pt",
+      "ru-ru",
       "zh-cn",
       "zh-tw"
     ],
@@ -169,40 +167,8 @@
     "enabled": true,
     "type": "application",
     "detail": {
-      "en": "qBittorrent & Aria Client",
-      "cn": "qBittorrent & Aria 客户端"
-    }
-  },
-  {
-    "name": "FaceDetector",
-    "github": "https://github.com/Zhoucheng133/FaceDetector-App",
-    "icon": "/apps/facedetector.svg",
-    "language": [
-      "en-us",
-      "zh-cn",
-      "zh-tw"
-    ],
-    "framework": "Flutter",
-    "platform": [
-      "d"
-    ],
-    "enabled": true,
-    "type": "application",
-    "components": [
-      {
-        "name": "app",
-        "framework": "Flutter",
-        "github": "https://github.com/Zhoucheng133/FaceDetector-App"
-      },
-      {
-        "name": "core",
-        "framework": "Python",
-        "github": "https://github.com/Zhoucheng133/Face-Detector"
-      }
-    ],
-    "detail": {
-      "en": "Face Detect Tool",
-      "cn": "人脸检测工具"
+      "en": "Download Manager For qBittorrent, Aria and Transmission",
+      "cn": "支持qBittorrent, Aria 和 Transmission的下载管理工具"
     }
   },
   {
@@ -212,7 +178,14 @@
     "msstore": "https://apps.microsoft.com/detail/9nxl2mp4v7mz?",
     "icon": "/apps/server_express.svg",
     "language": [
+      "de-de",
       "en-us",
+      "es-es",
+      "fr-fr",
+      "jp-jp",
+      "ko-kr",
+      "pt-pt",
+      "ru-ru",
       "zh-cn",
       "zh-tw"
     ],
@@ -231,8 +204,101 @@
       }
     ],
     "detail": {
-      "en": "A simple and quick SFTP client",
+      "en": "A Simple and Quick SFTP Client",
       "cn": "一个简单快捷的SFTP客户端"
+    }
+  },
+  {
+    "name": "EXIF Helper",
+    "github": "https://github.com/Zhoucheng133/EXIF-Helper",
+    "icon": "/apps/exif.svg",
+    "msstore": "https://apps.microsoft.com/detail/9p6389wjjj8k?referrer=appbadge&mode=direct",
+    "appstore": "https://apps.apple.com/us/app/exif-helper/id6817382650",
+    "language": [
+      "de-de",
+      "en-us",
+      "es-es",
+      "fr-fr",
+      "jp-jp",
+      "ko-kr",
+      "pt-pt",
+      "ru-ru",
+      "zh-cn",
+      "zh-tw"
+    ],
+    "framework": "Flutter",
+    "platform": [
+      "d",
+      "m"
+    ],
+    "enabled": true,
+    "type": "application",
+    "components": [
+      {
+        "name": "core",
+        "framework": "Go",
+        "github": "https://github.com/Zhoucheng133/EXIF-Helper-Core"
+      }
+    ],
+    "detail": {
+      "en": "EXIF Editor & Watermark Tool",
+      "cn": "EXIF编辑处理 & EXIF水印添加工具"
+    }
+  },
+  {
+    "name": "PhotoArchiver",
+    "github": "https://github.com/Zhoucheng133/Photo-Archiver",
+    "icon": "/apps/photo_archiver.svg",
+    "msstore": "https://apps.microsoft.com/detail/9p1wgv9bxbtv?referrer=appbadge&mode=direct",
+    "language": [
+      "en-us",
+      "zh-cn",
+      "zh-tw"
+    ],
+    "framework": "Flutter",
+    "platform": [
+      "d"
+    ],
+    "enabled": true,
+    "type": "application",
+    "components": [
+      {
+        "name": "core",
+        "framework": "Go",
+        "github": "https://github.com/Zhoucheng133/PhotoArchiver-Core"
+      }
+    ],
+    "detail": {
+      "en": "Make Photos Grouped by Datetime",
+      "cn": "按拍摄时间归档照片工具"
+    }
+  },
+  {
+    "name": "FaceDetector",
+    "github": "https://github.com/Zhoucheng133/FaceDetector-App",
+    "icon": "/apps/facedetector.svg",
+    "msstore": "https://apps.microsoft.com/detail/9pmcvnr610td?referrer=appbadge&mode=direct",
+    "language": [
+      "en-us",
+      "zh-cn",
+      "zh-tw"
+    ],
+    "framework": "Flutter",
+    "platform": [
+      "d"
+    ],
+    "enabled": true,
+    "type": "application",
+    "components": [
+      {
+        "name": "core",
+        "framework": "Python",
+        "github": "https://github.com/Zhoucheng133/Face-Detector"
+      }
+    ],
+    "detail": {
+      "en": "Face Detect Tool",
+      "cn": "人脸检测工具"
     }
   },
   {
@@ -240,9 +306,7 @@
     "github": "https://github.com/Zhoucheng133/MusicDL-PyQt",
     "icon": "/apps/musicdl.svg",
     "language": [
-      "en-us",
-      "zh-cn",
-      "zh-tw"
+      "zh-cn"
     ],
     "framework": "PyQt",
     "platform": [
@@ -260,9 +324,7 @@
     "github": "https://github.com/Zhoucheng133/MusicDL-GUI",
     "icon": "/apps/musicdl.svg",
     "language": [
-      "en-us",
-      "zh-cn",
-      "zh-tw"
+      "zh-cn"
     ],
     "framework": "Tauri",
     "platform": [
@@ -271,11 +333,6 @@
     "enabled": true,
     "type": "application",
     "components": [
-      {
-        "name": "app",
-        "framework": "Tauri",
-        "github": "https://github.com/Zhoucheng133/MusicDL-GUI"
-      },
       {
         "name": "core",
         "framework": "Python",
@@ -292,9 +349,7 @@
     "github": "https://github.com/Zhoucheng133/Gamma-Setter",
     "icon": "/apps/gamma.svg",
     "language": [
-      "en-us",
-      "zh-cn",
-      "zh-tw"
+      "en-us"
     ],
     "framework": "Flutter",
     "platform": [
@@ -303,11 +358,6 @@
     "enabled": true,
     "type": "application",
     "components": [
-      {
-        "name": "app",
-        "framework": "Flutter",
-        "github": "https://github.com/Zhoucheng133/Gamma-Setter"
-      },
       {
         "name": "core",
         "framework": "Rust",
@@ -320,7 +370,7 @@
       }
     ],
     "detail": {
-      "en": "Monitor's Gamma Adjust Tool",
+      "en": "Gamma Adjustment Tool",
       "cn": "显示器伽马值调节工具"
     }
   },
@@ -329,9 +379,7 @@
     "github": "https://github.com/Zhoucheng133/toWebp",
     "icon": "/apps/towebp.svg",
     "language": [
-      "en-us",
-      "zh-cn",
-      "zh-tw"
+      "zh-cn"
     ],
     "framework": "Tauri",
     "platform": [
@@ -340,11 +388,6 @@
     "enabled": true,
     "type": "application",
     "components": [
-      {
-        "name": "app",
-        "framework": "Tauri",
-        "github": "https://github.com/Zhoucheng133/toWebp"
-      },
       {
         "name": "core",
         "framework": "Go",
@@ -401,9 +444,7 @@
     "github": "https://github.com/Zhoucheng133/Deface-GUI",
     "icon": "/apps/deface.svg",
     "language": [
-      "en-us",
-      "zh-cn",
-      "zh-tw"
+      "zh-cn"
     ],
     "framework": "Tauri",
     "platform": [
@@ -421,9 +462,7 @@
     "github": "https://github.com/Zhoucheng133/Whisper-GUI",
     "icon": "/apps/whisper.svg",
     "language": [
-      "en-us",
-      "zh-cn",
-      "zh-tw"
+      "zh-cn"
     ],
     "framework": "Flutter",
     "platform": [
@@ -437,45 +476,12 @@
     }
   },
   {
-    "name": "PhotoArchiver",
-    "github": "https://github.com/Zhoucheng133/Photo-Archiver",
-    "icon": "/apps/photo_archiver.svg",
-    "language": [
-      "en-us",
-      "zh-cn",
-      "zh-tw"
-    ],
-    "framework": "Flutter",
-    "platform": [
-      "d"
-    ],
-    "enabled": true,
-    "type": "application",
-    "components": [
-      {
-        "name": "app",
-        "framework": "Flutter",
-        "github": "https://github.com/Zhoucheng133/Photo-Archiver"
-      },
-      {
-        "name": "core",
-        "framework": "Go",
-        "github": "https://github.com/Zhoucheng133/PhotoArchiver-Core"
-      }
-    ],
-    "detail": {
-      "en": "Make Photos Grouped by Datetime",
-      "cn": "按拍摄时间归档照片工具"
-    }
-  },
-  {
     "name": "GitPack",
     "github": "https://github.com/Zhoucheng133/GitPack",
     "icon": "/apps/gitpack.svg",
+    "msstore": "https://apps.microsoft.com/detail/9mvxm8b9ljz1",
     "language": [
-      "en-us",
-      "zh-cn",
-      "zh-tw"
+      "zh-cn"
     ],
     "framework": "Flutter",
     "platform": [
@@ -484,11 +490,6 @@
     "enabled": true,
     "type": "application",
     "components": [
-      {
-        "name": "app",
-        "framework": "Flutter",
-        "github": "https://github.com/Zhoucheng133/GitPack"
-      },
       {
         "name": "core",
         "framework": "Go",
@@ -498,39 +499,6 @@
     "detail": {
       "en": "Pack Git Repo Without Ignores",
       "cn": "打包无视忽略规则的 Git 仓库工具"
-    }
-  },
-  {
-    "name": "EXIF Helper",
-    "github": "https://github.com/Zhoucheng133/EXIF-Helper",
-    "icon": "/apps/exif.svg",
-    "language": [
-      "en-us",
-      "zh-cn",
-      "zh-tw"
-    ],
-    "framework": "Flutter",
-    "platform": [
-      "d",
-      "m"
-    ],
-    "enabled": true,
-    "type": "application",
-    "components": [
-      {
-        "name": "app",
-        "framework": "Flutter",
-        "github": "https://github.com/Zhoucheng133/EXIF-Helper"
-      },
-      {
-        "name": "core",
-        "framework": "Go",
-        "github": "https://github.com/Zhoucheng133/EXIF-Helper-Core"
-      }
-    ],
-    "detail": {
-      "en": "EXIF Watermark Adding Tool",
-      "cn": "EXIF 水印添加工具"
     }
   },
   {
@@ -548,12 +516,8 @@
     ],
     "enabled": true,
     "type": "application",
+    "msstore": "https://apps.microsoft.com/detail/9ppfngbt79dv",
     "components": [
-      {
-        "name": "app",
-        "framework": "Tauri",
-        "github": "https://github.com/Zhoucheng133/HEIC-Converter"
-      },
       {
         "name": "core",
         "framework": "Python",
@@ -590,9 +554,7 @@
     "github": "https://github.com/Zhoucheng133/pyftp-GUI",
     "icon": "/apps/pyftp.png",
     "language": [
-      "en-us",
-      "zh-cn",
-      "zh-tw"
+      "zh-cn"
     ],
     "framework": "Flutter",
     "platform": [
@@ -630,9 +592,7 @@
     "github": "https://github.com/Zhoucheng133/EasyChat",
     "icon": "/apps/easychat.svg",
     "language": [
-      "en-us",
-      "zh-cn",
-      "zh-tw"
+      "zh-cn"
     ],
     "framework": "Flutter",
     "platform": [
@@ -650,9 +610,7 @@
     "github": "https://github.com/Zhoucheng133/virtual-directory",
     "icon": "/apps/vd.png",
     "language": [
-      "en-us",
-      "zh-cn",
-      "zh-tw"
+      "zh-cn"
     ],
     "framework": "Electron",
     "platform": [
@@ -661,11 +619,6 @@
     "enabled": false,
     "type": "application",
     "components": [
-      {
-        "name": "app",
-        "framework": "Electron",
-        "github": "https://github.com/Zhoucheng133/virtual-directory"
-      },
       {
         "name": "webui",
         "framework": "Vue",
@@ -682,9 +635,7 @@
     "github": "https://github.com/Zhoucheng133/AriaUI",
     "icon": "/apps/aria.svg",
     "language": [
-      "en-us",
-      "zh-cn",
-      "zh-tw"
+      "zh-cn"
     ],
     "framework": "Flutter",
     "platform": [
@@ -694,11 +645,6 @@
     "enabled": false,
     "type": "application",
     "components": [
-      {
-        "name": "aria ui",
-        "framework": "Flutter",
-        "github": "https://github.com/Zhoucheng133/AriaUI"
-      },
       {
         "name": "aria remote",
         "framework": "Flutter",
@@ -714,10 +660,8 @@
     "name": "Anime Update Panel",
     "github": "https://github.com/Zhoucheng133/Anime-Update-Panel",
     "icon": "/apps/aup.svg",
-    "language": [
-      "en-us",
-      "zh-cn",
-      "zh-tw"
+   "language": [
+      "zh-cn"
     ],
     "framework": "Flutter",
     "platform": [
@@ -735,9 +679,7 @@
     "github": "https://github.com/Zhoucheng133/CuteHttpFileServer-GUI",
     "icon": "/icon.svg",
     "language": [
-      "en-us",
-      "zh-cn",
-      "zh-tw"
+      "zh-cn"
     ],
     "framework": "Flutter",
     "platform": [
@@ -765,7 +707,7 @@
     "type": "service",
     "components": [
       {
-        "name": "web",
+        "name": "webui",
         "framework": "Vue",
         "github": "https://github.com/Zhoucheng133/Anime-Helper-UI"
       }
@@ -780,9 +722,7 @@
     "github": "https://github.com/Zhoucheng133/Jackett-Helper",
     "icon": "/apps/jacketthelper.svg",
     "language": [
-      "en-us",
-      "zh-cn",
-      "zh-tw"
+      "zh-cn"
     ],
     "framework": "ElysiaJS",
     "platform": [
@@ -791,11 +731,6 @@
     "enabled": true,
     "type": "service",
     "components": [
-      {
-        "name": "server",
-        "framework": "ElysiaJS",
-        "github": "https://github.com/Zhoucheng133/Jackett-Helper"
-      },
       {
         "name": "webui",
         "framework": "Vue",
@@ -813,8 +748,7 @@
     "icon": "/apps/sht.svg",
     "language": [
       "en-us",
-      "zh-cn",
-      "zh-tw"
+      "zh-cn"
     ],
     "framework": "FastAPI",
     "platform": [
@@ -823,11 +757,6 @@
     "enabled": true,
     "type": "service",
     "components": [
-      {
-        "name": "server",
-        "framework": "FastAPI",
-        "github": "https://github.com/Zhoucheng133/SHT-Viz"
-      },
       {
         "name": "webui",
         "framework": "Vue",
@@ -844,9 +773,7 @@
     "github": "https://github.com/Zhoucheng133/MusicDL-Web",
     "icon": "/apps/musicdl.svg",
     "language": [
-      "en-us",
-      "zh-cn",
-      "zh-tw"
+      "zh-cn"
     ],
     "framework": "FastAPI",
     "platform": [
@@ -855,11 +782,6 @@
     "enabled": true,
     "type": "service",
     "components": [
-      {
-        "name": "server",
-        "framework": "FastAPI",
-        "github": "https://github.com/Zhoucheng133/MusicDL-Web"
-      },
       {
         "name": "webui",
         "framework": "Svelte",
@@ -877,8 +799,7 @@
     "icon": "/apps/localsocks.svg",
     "language": [
       "en-us",
-      "zh-cn",
-      "zh-tw"
+      "zh-cn"
     ],
     "framework": "Fiber",
     "platform": [
@@ -887,11 +808,6 @@
     "enabled": true,
     "type": "service",
     "components": [
-      {
-        "name": "server",
-        "framework": "Fiber",
-        "github": "https://github.com/Zhoucheng133/LocalSocks"
-      },
       {
         "name": "webui",
         "framework": "React",
@@ -909,21 +825,15 @@
     "icon": "/apps/dav.svg",
     "language": [
       "en-us",
-      "zh-cn",
-      "zh-tw"
+      "zh-cn"
     ],
-    "framework": "Go",
+    "framework": "Fiber",
     "platform": [
       "s"
     ],
     "enabled": true,
     "type": "service",
     "components": [
-      {
-        "name": "server",
-        "framework": "Go",
-        "github": "https://github.com/Zhoucheng133/DAV-with-Docker"
-      },
       {
         "name": "webui",
         "framework": "React",
@@ -940,9 +850,7 @@
     "github": "https://github.com/Zhoucheng133/Index-Page",
     "icon": "/icon.svg",
     "language": [
-      "en-us",
-      "zh-cn",
-      "zh-tw"
+      "zh-cn"
     ],
     "framework": "Gin",
     "platform": [
@@ -951,11 +859,6 @@
     "enabled": true,
     "type": "service",
     "components": [
-      {
-        "name": "server",
-        "framework": "Gin",
-        "github": "https://github.com/Zhoucheng133/Index-Page-Core"
-      },
       {
         "name": "webui",
         "framework": "Vue",
@@ -972,9 +875,7 @@
     "github": "https://github.com/Zhoucheng133/Monitor",
     "icon": "/icon.svg",
     "language": [
-      "en-us",
-      "zh-cn",
-      "zh-tw"
+      "en-us"
     ],
     "framework": "Spring (Kotlin)",
     "platform": [
@@ -983,11 +884,6 @@
     "enabled": true,
     "type": "service",
     "components": [
-      {
-        "name": "server",
-        "framework": "Spring (Kotlin)",
-        "github": "https://github.com/Zhoucheng133/Monitor"
-      },
       {
         "name": "webui",
         "framework": "Vue",
@@ -1004,9 +900,7 @@
     "github": "https://github.com/Zhoucheng133/MultiCash",
     "icon": "/apps/multicash.svg",
     "language": [
-      "en-us",
-      "zh-cn",
-      "zh-tw"
+      "zh-cn"
     ],
     "framework": "ElysiaJS",
     "platform": [
@@ -1015,11 +909,6 @@
     "enabled": false,
     "type": "service",
     "components": [
-      {
-        "name": "server",
-        "framework": "ElysiaJS",
-        "github": "https://github.com/Zhoucheng133/MultiCash"
-      },
       {
         "name": "webui",
         "framework": "Vue",
@@ -1036,9 +925,7 @@
     "github": "https://github.com/Zhoucheng133/Mikan-Helper",
     "icon": "/icon.svg",
     "language": [
-      "en-us",
-      "zh-cn",
-      "zh-tw"
+      "zh-cn"
     ],
     "framework": "Flask",
     "platform": [
@@ -1047,11 +934,6 @@
     "enabled": false,
     "type": "service",
     "components": [
-      {
-        "name": "server",
-        "framework": "Flask",
-        "github": "https://github.com/Zhoucheng133/Mikan-Helper"
-      },
       {
         "name": "webui",
         "framework": "React",
@@ -1068,9 +950,7 @@
     "github": "https://github.com/Zhoucheng133/Aria-Linker",
     "icon": "/icon.svg",
     "language": [
-      "en-us",
-      "zh-cn",
-      "zh-tw"
+      "zh-cn"
     ],
     "framework": "JavaScript",
     "platform": [],
@@ -1086,9 +966,7 @@
     "github": "https://github.com/Zhoucheng133/qBit-Linker",
     "icon": "/icon.svg",
     "language": [
-      "en-us",
-      "zh-cn",
-      "zh-tw"
+      "zh-cn"
     ],
     "framework": "JavaScript",
     "platform": [],
@@ -1104,9 +982,7 @@
     "github": "https://github.com/Zhoucheng133/Live-BG",
     "icon": "/apps/netplayer.svg",
     "language": [
-      "en-us",
-      "zh-cn",
-      "zh-tw"
+      "en-us"
     ],
     "framework": "Gin & Vue",
     "platform": [],
