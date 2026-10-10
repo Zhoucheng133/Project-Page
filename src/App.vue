@@ -19,6 +19,7 @@ interface Project {
   framework: string
   platform: ('d' | 'm' | 's')[]
   components?: ComponentItem[]
+  enabled?: boolean
   detail: {
     en: string
     cn: string
@@ -231,7 +232,12 @@ const getPlatformName = (p: string) => {
         <div
           v-for="(project, index) in filteredProjects"
           :key="index"
-          class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group"
+          :class="[
+            'bg-white dark:bg-slate-900 rounded-2xl border p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group',
+            project.enabled === false
+              ? 'opacity-70 border-dashed border-slate-300 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/40'
+              : 'border-slate-200 dark:border-slate-800'
+          ]"
         >
           <div>
             <!-- Top Row: Icon & Platforms -->
@@ -244,7 +250,14 @@ const getPlatformName = (p: string) => {
                   @error="($event.target as HTMLElement).style.display = 'none'"
                 />
                 <div>
-                  <h3 class="text-base font-semibold text-slate-900 dark:text-slate-100 transition-colors">
+                  <h3
+                    :class="[
+                      'text-base font-semibold transition-colors',
+                      project.enabled === false
+                        ? 'line-through text-slate-500 dark:text-slate-400'
+                        : 'text-slate-900 dark:text-slate-100'
+                    ]"
+                  >
                     {{ project.name }}
                   </h3>
                   <span class="inline-block mt-0.5 px-2 py-0.5 text-[10px] font-medium bg-teal-50 dark:bg-teal-950/60 text-teal-600 dark:text-teal-400 rounded-md border border-teal-100 dark:border-teal-900/50">

@@ -25,7 +25,7 @@ const messages = {
   },
   cn: {
     title: '项目作品集',
-    subtitle: '精选开源应用程序、工具与组件展示',
+    subtitle: '开源应用程序、工具与组件',
     search: '通过名称、描述、框架搜索项目...',
     all: '全部',
     desktop: '桌面端',
