@@ -108,13 +108,9 @@ const getPlatformName = (p: string) => {
     <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <div class="flex items-center space-x-3">
-          <div class="w-10 h-10 rounded-xl bg-linear-to-tr from-indigo-500 to-violet-600 flex items-center justify-center text-white shadow-md shadow-indigo-500/20">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-            </svg>
-          </div>
+          <img src="/icon.svg" alt="Logo" class="w-10 h-10 rounded-xl object-cover" />
           <div>
-            <h1 class="text-lg font-bold tracking-tight bg-linear-to-r from-indigo-600 to-violet-600 dark:from-indigo-400 dark:to-violet-400 bg-clip-text text-transparent">
+            <h1 class="text-lg font-bold tracking-tight bg-linear-to-r from-teal-600 to-emerald-600 dark:from-teal-400 dark:to-emerald-400 bg-clip-text text-transparent">
               {{ t('title') }}
             </h1>
             <p class="text-xs text-slate-500 dark:text-slate-400 hidden sm:block">{{ t('subtitle') }}</p>
@@ -168,7 +164,7 @@ const getPlatformName = (p: string) => {
             v-model="searchQuery"
             type="text"
             :placeholder="t('search')"
-            class="w-full pl-10 pr-4 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 transition-all shadow-sm"
+            class="w-full pl-10 pr-4 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 dark:focus:ring-teal-400 transition-all shadow-sm"
           />
         </div>
 
@@ -179,7 +175,7 @@ const getPlatformName = (p: string) => {
             :class="[
               'cursor-pointer px-4 py-1.5 text-xs font-medium rounded-lg transition-all whitespace-nowrap',
               selectedPlatform === 'all'
-                ? 'bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm'
+                ? 'bg-white dark:bg-slate-800 text-teal-600 dark:text-teal-400 shadow-sm'
                 : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
             ]"
           >
@@ -190,7 +186,7 @@ const getPlatformName = (p: string) => {
             :class="[
               'cursor-pointer px-4 py-1.5 text-xs font-medium rounded-lg transition-all flex items-center space-x-1.5 whitespace-nowrap',
               selectedPlatform === 'd'
-                ? 'bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm'
+                ? 'bg-white dark:bg-slate-800 text-teal-600 dark:text-teal-400 shadow-sm'
                 : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
             ]"
           >
@@ -204,7 +200,7 @@ const getPlatformName = (p: string) => {
             :class="[
               'cursor-pointer px-4 py-1.5 text-xs font-medium rounded-lg transition-all flex items-center space-x-1.5 whitespace-nowrap',
               selectedPlatform === 'm'
-                ? 'bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm'
+                ? 'bg-white dark:bg-slate-800 text-teal-600 dark:text-teal-400 shadow-sm'
                 : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
             ]"
           >
@@ -218,7 +214,7 @@ const getPlatformName = (p: string) => {
             :class="[
               'cursor-pointer px-4 py-1.5 text-xs font-medium rounded-lg transition-all flex items-center space-x-1.5 whitespace-nowrap',
               selectedPlatform === 's'
-                ? 'bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm'
+                ? 'bg-white dark:bg-slate-800 text-teal-600 dark:text-teal-400 shadow-sm'
                 : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
             ]"
           >
@@ -251,7 +247,7 @@ const getPlatformName = (p: string) => {
                   <h3 class="text-base font-semibold text-slate-900 dark:text-slate-100 transition-colors">
                     {{ project.name }}
                   </h3>
-                  <span class="inline-block mt-0.5 px-2 py-0.5 text-[10px] font-medium bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 rounded-md border border-indigo-100 dark:border-indigo-900/50">
+                  <span class="inline-block mt-0.5 px-2 py-0.5 text-[10px] font-medium bg-teal-50 dark:bg-teal-950/60 text-teal-600 dark:text-teal-400 rounded-md border border-teal-100 dark:border-teal-900/50">
                     {{ project.framework }}
                   </span>
                 </div>
@@ -315,7 +311,7 @@ const getPlatformName = (p: string) => {
                     :href="comp.github"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="cursor-pointer text-indigo-600 dark:text-indigo-400 hover:underline flex items-center space-x-1"
+                    class="cursor-pointer text-teal-600 dark:text-teal-400 hover:underline flex items-center space-x-1"
                   >
                     <span>GitHub</span>
                     <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -349,11 +345,14 @@ const getPlatformName = (p: string) => {
                 :href="project.appstore"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="cursor-pointer inline-flex items-center space-x-1 px-2.5 py-1.5 text-xs font-medium bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 rounded-lg hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors border border-indigo-100 dark:border-indigo-900/50"
+                class="cursor-pointer inline-flex items-center space-x-1 px-2.5 py-1.5 text-xs font-medium bg-teal-50 dark:bg-teal-950/60 text-teal-600 dark:text-teal-400 rounded-lg hover:bg-teal-100 dark:hover:bg-teal-900 transition-colors border border-teal-100 dark:border-teal-900/50"
                 :title="t('appStore')"
               >
                 <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2..77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.8 6.55c.57-.69 0.96-1.65.85-2.61-.84.04-1.85.56-2.44 1.25-.53.61-.99 1.58-.87 2.52.94.07 1.89-.47 2.46-1.16z"/>
+                  <g transform="translate(-7.29 -7.61)">
+                    <path d="M24.76888,20.30068a4.94881,4.94881,0,0,1,2.35656-4.15206,5.06566,5.06566,0,0,0-3.99116-2.15768c-1.67924-.17626-3.30719,1.00483-4.1629,1.00483-.87227,0-2.18977-.98733-3.6085-.95814a5.31529,5.31529,0,0,0-4.47292,2.72787c-1.934,3.34842-.49141,8.26947,1.3612,10.97608.9269,1.32535,2.01018,2.8058,3.42763,2.7533,1.38706-.05753,1.9051-.88448,3.5794-.88448,1.65876,0,2.14479.88448,3.591.8511,1.48838-.02416,2.42613-1.33124,3.32051-2.66914a10.962,10.962,0,0,0,1.51842-3.09251A4.78205,4.78205,0,0,1,24.76888,20.30068Z"/>
+                    <path d="M22.03725,12.21089a4.87248,4.87248,0,0,0,1.11452-3.49062,4.95746,4.95746,0,0,0-3.20758,1.65961,4.63634,4.63634,0,0,0-1.14371,3.36139A4.09905,4.09905,0,0,0,22.03725,12.21089Z"/>
+                  </g>
                 </svg>
                 <span>App Store</span>
               </a>
