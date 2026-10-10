@@ -20,10 +20,15 @@ interface Project {
   platform: ('d' | 'm' | 's')[]
   components?: ComponentItem[]
   enabled?: boolean
+  type: 'application' | 'service' | 'script'
   detail: {
     en: string
     cn: string
   }
+}
+
+const getProjectsByType = (type: string) => {
+  return filteredProjects.value.filter(p => p.type === type)
 }
 
 const projects = ref<Project[]>(projectsData as Project[])
@@ -227,69 +232,83 @@ const getPlatformName = (p: string) => {
         </div>
       </div>
 
-      <!-- Projects Grid -->
-      <div v-if="filteredProjects.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div
-          v-for="(project, index) in filteredProjects"
-          :key="index"
-          :class="[
-            'bg-white dark:bg-slate-900 rounded-2xl border p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group',
-            project.enabled === false
-              ? 'opacity-70 border-dashed border-slate-300 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/40'
-              : 'border-slate-200 dark:border-slate-800'
-          ]"
-        >
-          <div>
-            <!-- Top Row: Icon & Platforms -->
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center space-x-3">
-                <img
-                  :src="project.icon"
-                  :alt="project.name"
-                  class="w-12 h-12 rounded-xl object-cover shrink-0"
-                  @error="($event.target as HTMLElement).style.display = 'none'"
-                />
-                <div>
-                  <h3
-                    :class="[
-                      'text-base font-semibold transition-colors',
-                      project.enabled === false
-                        ? 'line-through text-slate-500 dark:text-slate-400'
-                        : 'text-slate-900 dark:text-slate-100'
-                    ]"
-                  >
-                    {{ project.name }}
-                  </h3>
-                  <span class="inline-block mt-0.5 px-2 py-0.5 text-[10px] font-medium bg-teal-50 dark:bg-teal-950/60 text-teal-600 dark:text-teal-400 rounded-md border border-teal-100 dark:border-teal-900/50">
-                    {{ project.framework }}
-                  </span>
-                </div>
-              </div>
-
-              <!-- Platform Icons -->
-              <div class="flex items-center space-x-1.5 bg-slate-100 dark:bg-slate-800/60 p-1.5 rounded-lg">
-                <template v-for="p in project.platform" :key="p">
-                  <!-- Desktop -->
-                  <span v-if="p === 'd'" class="text-slate-600 dark:text-slate-300" :title="getPlatformName('d')">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </span>
-                  <!-- Mobile -->
-                  <span v-else-if="p === 'm'" class="text-slate-600 dark:text-slate-300" :title="getPlatformName('m')">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                    </svg>
-                  </span>
-                  <!-- Server -->
-                  <span v-else-if="p === 's'" class="text-slate-600 dark:text-slate-300" :title="getPlatformName('s')">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
-                    </svg>
-                  </span>
-                </template>
-              </div>
+      <!-- Projects Categorized Sections -->
+      <div v-if="filteredProjects.length > 0" class="space-y-12">
+        <template v-for="cat in ['application', 'service', 'script']" :key="cat">
+          <div v-if="getProjectsByType(cat).length > 0" class="space-y-6">
+            <!-- Category Header -->
+            <div class="flex items-center space-x-3 border-b border-slate-200 dark:border-slate-800 pb-3">
+              <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100 capitalize">
+                {{ t(cat) }}
+              </h2>
+              <span class="px-2.5 py-0.5 text-xs font-medium rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
+                {{ getProjectsByType(cat).length }}
+              </span>
             </div>
+
+            <!-- Category Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div
+                v-for="(project, index) in getProjectsByType(cat)"
+                :key="index"
+                :class="[
+                  'bg-white dark:bg-slate-900 rounded-2xl border p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group',
+                  project.enabled === false
+                    ? 'opacity-70 border-dashed border-slate-300 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/40'
+                    : 'border-slate-200 dark:border-slate-800'
+                ]"
+              >
+                <div>
+                  <!-- Top Row: Icon & Platforms -->
+                  <div class="flex items-start justify-between mb-4">
+                    <div class="flex items-center space-x-3">
+                      <img
+                        :src="project.icon"
+                        :alt="project.name"
+                        class="w-12 h-12 rounded-xl object-cover shrink-0"
+                        @error="($event.target as HTMLElement).style.display = 'none'"
+                      />
+                      <div>
+                        <h3
+                          :class="[
+                            'text-base font-semibold transition-colors',
+                            project.enabled === false
+                              ? 'line-through text-slate-500 dark:text-slate-400'
+                              : 'text-slate-900 dark:text-slate-100'
+                          ]"
+                        >
+                          {{ project.name }}
+                        </h3>
+                        <span class="inline-block mt-0.5 px-2 py-0.5 text-[10px] font-medium bg-teal-50 dark:bg-teal-950/60 text-teal-600 dark:text-teal-400 rounded-md border border-teal-100 dark:border-teal-900/50">
+                          {{ project.framework }}
+                        </span>
+                      </div>
+                    </div>
+
+                    <!-- Platform Icons (Hidden for script type) -->
+                    <div v-if="project.type !== 'script' && project.platform && project.platform.length > 0" class="flex items-center space-x-1.5 bg-slate-100 dark:bg-slate-800/60 p-1.5 rounded-lg">
+                      <template v-for="p in project.platform" :key="p">
+                        <!-- Desktop -->
+                        <span v-if="p === 'd'" class="text-slate-600 dark:text-slate-300" :title="getPlatformName('d')">
+                          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                          </svg>
+                        </span>
+                        <!-- Mobile -->
+                        <span v-else-if="p === 'm'" class="text-slate-600 dark:text-slate-300" :title="getPlatformName('m')">
+                          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                          </svg>
+                        </span>
+                        <!-- Server -->
+                        <span v-else-if="p === 's'" class="text-slate-600 dark:text-slate-300" :title="getPlatformName('s')">
+                          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                          </svg>
+                        </span>
+                      </template>
+                    </div>
+                  </div>
 
             <!-- Detail Description -->
             <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-3">
@@ -389,6 +408,9 @@ const getPlatformName = (p: string) => {
             </div>
           </div>
         </div>
+            </div>
+          </div>
+        </template>
       </div>
 
       <!-- Empty State -->

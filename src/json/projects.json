@@ -13,6 +13,7 @@
       "d"
     ],
     "enabled": true,
+    "type": "application",
     "components": [
       {
         "name": "app",
@@ -39,6 +40,7 @@
       "m"
     ],
     "enabled": true,
+    "type": "application",
     "detail": {
       "en": "Subsonic & Navidrome based Music Player",
       "cn": "基于 Subsonic & Navidrome 的音乐播放器 (移动端)"
@@ -58,6 +60,7 @@
       "d"
     ],
     "enabled": true,
+    "type": "application",
     "components": [
       {
         "name": "app",
@@ -94,6 +97,7 @@
       "m"
     ],
     "enabled": true,
+    "type": "application",
     "components": [
       {
         "name": "app",
@@ -130,6 +134,7 @@
       "d"
     ],
     "enabled": true,
+    "type": "application",
     "components": [
       {
         "name": "app",
@@ -162,6 +167,7 @@
       "m"
     ],
     "enabled": true,
+    "type": "application",
     "detail": {
       "en": "qBittorrent & Aria Client",
       "cn": "qBittorrent & Aria 客户端"
@@ -181,6 +187,7 @@
       "d"
     ],
     "enabled": true,
+    "type": "application",
     "components": [
       {
         "name": "app",
@@ -215,6 +222,7 @@
       "m"
     ],
     "enabled": true,
+    "type": "application",
     "components": [
       {
         "name": "core",
@@ -241,6 +249,7 @@
       "d"
     ],
     "enabled": true,
+    "type": "application",
     "detail": {
       "en": "Music Download Tool",
       "cn": "音乐下载工具 (PyQt)"
@@ -260,6 +269,7 @@
       "d"
     ],
     "enabled": true,
+    "type": "application",
     "components": [
       {
         "name": "app",
@@ -291,6 +301,7 @@
       "d"
     ],
     "enabled": true,
+    "type": "application",
     "components": [
       {
         "name": "app",
@@ -327,6 +338,7 @@
       "d"
     ],
     "enabled": true,
+    "type": "application",
     "components": [
       {
         "name": "app",
@@ -358,6 +370,7 @@
       "m"
     ],
     "enabled": true,
+    "type": "application",
     "detail": {
       "en": "Loop an Audio",
       "cn": "音频单曲循环工具"
@@ -377,6 +390,7 @@
       "m"
     ],
     "enabled": true,
+    "type": "application",
     "detail": {
       "en": "A GPS Tool",
       "cn": "GPS 追踪工具"
@@ -396,6 +410,7 @@
       "d"
     ],
     "enabled": true,
+    "type": "application",
     "detail": {
       "en": "Deface GUI Helper",
       "cn": "Deface GUI 辅助工具"
@@ -415,6 +430,7 @@
       "d"
     ],
     "enabled": true,
+    "type": "application",
     "detail": {
       "en": "Whisper GUI Helper",
       "cn": "Whisper GUI 辅助工具"
@@ -434,6 +450,7 @@
       "d"
     ],
     "enabled": true,
+    "type": "application",
     "components": [
       {
         "name": "app",
@@ -465,6 +482,7 @@
       "d"
     ],
     "enabled": true,
+    "type": "application",
     "components": [
       {
         "name": "app",
@@ -497,6 +515,7 @@
       "m"
     ],
     "enabled": true,
+    "type": "application",
     "components": [
       {
         "name": "app",
@@ -528,6 +547,7 @@
       "d"
     ],
     "enabled": true,
+    "type": "application",
     "components": [
       {
         "name": "app",
@@ -559,6 +579,7 @@
       "d"
     ],
     "enabled": true,
+    "type": "application",
     "detail": {
       "en": "Multi Subtitles Burning Tool",
       "cn": "多字幕烧录工具"
@@ -578,6 +599,7 @@
       "d"
     ],
     "enabled": true,
+    "type": "application",
     "detail": {
       "en": "pyftpdlib GUI Helper",
       "cn": "pyftpdlib 图形化辅助工具"
@@ -597,6 +619,7 @@
       "d"
     ],
     "enabled": true,
+    "type": "application",
     "detail": {
       "en": "FFmpeg GUI Helper",
       "cn": "FFmpeg 图形化辅助工具"
@@ -616,6 +639,7 @@
       "d"
     ],
     "enabled": true,
+    "type": "application",
     "detail": {
       "en": "OpenAPI Client",
       "cn": "OpenAPI 客户端"
@@ -635,6 +659,7 @@
       "d"
     ],
     "enabled": false,
+    "type": "application",
     "components": [
       {
         "name": "app",
@@ -667,6 +692,7 @@
       "m"
     ],
     "enabled": false,
+    "type": "application",
     "components": [
       {
         "name": "aria ui",
@@ -698,6 +724,7 @@
       "d"
     ],
     "enabled": false,
+    "type": "application",
     "detail": {
       "en": "[Merge to Anime Helper]",
       "cn": "[已合并至 Anime Helper]"
@@ -717,6 +744,7 @@
       "d"
     ],
     "enabled": false,
+    "type": "application",
     "detail": {
       "en": "[Split to Sharer and DAV Server]",
       "cn": "[已拆分为 Sharer 和 DAV Server]"
@@ -734,6 +762,7 @@
       "s"
     ],
     "enabled": true,
+    "type": "service",
     "components": [
       {
         "name": "web",
@@ -760,6 +789,7 @@
       "s"
     ],
     "enabled": true,
+    "type": "service",
     "components": [
       {
         "name": "server",
@@ -791,6 +821,7 @@
       "s"
     ],
     "enabled": true,
+    "type": "service",
     "components": [
       {
         "name": "server",
@@ -822,6 +853,7 @@
       "s"
     ],
     "enabled": true,
+    "type": "service",
     "components": [
       {
         "name": "server",
@@ -853,6 +885,7 @@
       "s"
     ],
     "enabled": true,
+    "type": "service",
     "components": [
       {
         "name": "server",
@@ -884,6 +917,7 @@
       "s"
     ],
     "enabled": true,
+    "type": "service",
     "components": [
       {
         "name": "server",
@@ -915,6 +949,7 @@
       "s"
     ],
     "enabled": true,
+    "type": "service",
     "components": [
       {
         "name": "server",
@@ -946,6 +981,7 @@
       "s"
     ],
     "enabled": true,
+    "type": "service",
     "components": [
       {
         "name": "server",
@@ -977,6 +1013,7 @@
       "s"
     ],
     "enabled": false,
+    "type": "service",
     "components": [
       {
         "name": "server",
@@ -1008,6 +1045,7 @@
       "s"
     ],
     "enabled": false,
+    "type": "service",
     "components": [
       {
         "name": "server",
@@ -1035,10 +1073,9 @@
       "zh-tw"
     ],
     "framework": "JavaScript",
-    "platform": [
-      "d"
-    ],
+    "platform": [],
     "enabled": true,
+    "type": "script",
     "detail": {
       "en": "Tampermonkey Script that Add Task to Aria",
       "cn": "添加任务到 Aria 的油猴脚本"
@@ -1054,10 +1091,9 @@
       "zh-tw"
     ],
     "framework": "JavaScript",
-    "platform": [
-      "d"
-    ],
+    "platform": [],
     "enabled": true,
+    "type": "script",
     "detail": {
       "en": "Tampermonkey Script that Add Task to qBit",
       "cn": "添加任务到 qBit 的油猴脚本"
@@ -1073,10 +1109,9 @@
       "zh-tw"
     ],
     "framework": "Gin & Vue",
-    "platform": [
-      "d"
-    ],
+    "platform": [],
     "enabled": true,
+    "type": "script",
     "detail": {
       "en": "netPlayer OBS Live Background",
       "cn": "netPlayer OBS 直播背景"
