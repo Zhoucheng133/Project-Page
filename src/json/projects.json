@@ -5,7 +5,14 @@
     "icon": "/apps/netplayer.svg",
     "msstore": "https://apps.microsoft.com/detail/9nfmtfpz1zct?referrer=appbadge&mode=direct",
     "language": [
+      "de-de",
       "en-us",
+      "es-es",
+      "fr-fr",
+      "jp-jp",
+      "ko-kr",
+      "pt-pt",
+      "ru-ru",
       "zh-cn",
       "zh-tw"
     ],
