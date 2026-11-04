@@ -1,6 +1,8 @@
 name: 部署到服务器
 
 on:
+  push:
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
