@@ -5,8 +5,6 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: "pages"
@@ -29,12 +27,7 @@ jobs:
 
       - name: 构建
         run: bun run build
-
-      - name: 上传产物
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist
-
+        
       - name: 部署到服务器
         env:
           SERVER_HOST: ${{ secrets.SERVER_HOST }}
