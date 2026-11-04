@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: 部署至Github Pages
 
 on:
   push:
@@ -18,24 +18,24 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: 检出
         uses: actions/checkout@v4
 
-      - name: Install Bun
+      - name: 安装Bun
         uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
 
-      - name: Install dependencies
+      - name: 安装依赖
         run: bun install
 
-      - name: Build
-        run: bun run build
+      - name: 构建
+        run: bun run build --base="/Project-Page"
 
-      - name: Setup Pages
+      - name: 设置Pages
         uses: actions/configure-pages@v4
 
-      - name: Upload artifact
+      - name: 上传构建内容
         uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'

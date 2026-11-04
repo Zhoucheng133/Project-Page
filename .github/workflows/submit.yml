@@ -1,0 +1,55 @@
+name: 部署到服务器
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出
+        uses: actions/checkout@v4
+
+      - name: 安装Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: 安装依赖
+        run: bun install
+
+      - name: 构建
+        run: bun run build
+
+      - name: 上传产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+      - name: 部署到服务器
+        env:
+          SERVER_HOST: ${{ secrets.SERVER_HOST }}
+          SERVER_USER: ${{ secrets.SERVER_USER }}
+          SERVER_PASSWORD: ${{ secrets.SERVER_PASSWORD }}
+          SERVER_PORT: ${{ secrets.SERVER_PORT }}
+        run: |
+          sudo apt-get install -y lftp
+
+          lftp <<EOF
+          set sftp:connect-program "ssh -a -x -p $SERVER_PORT"
+          set sftp:auto-confirm yes
+          set net:max-retries 2
+          open sftp://$SERVER_HOST
+          user "$SERVER_USER" "$SERVER_PASSWORD"
+          mirror -R --delete --verbose --parallel=10 ./dist/ /pages/projects/
+          bye
+          EOF
