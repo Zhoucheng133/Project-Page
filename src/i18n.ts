@@ -25,7 +25,10 @@ const messages = {
     viewMsStore: 'MS Store',
     componentOf: 'Component:',
     switchLang: '中文',
-    themeToggle: 'Toggle Theme'
+    themeToggle: 'Toggle Theme',
+    themeAuto: 'Auto',
+    themeDark: 'Dark',
+    themeLight: 'Light'
   },
   cn: {
     title: '项目作品集',
@@ -51,7 +54,10 @@ const messages = {
     viewMsStore: '微软商店',
     componentOf: '组件:',
     switchLang: 'English',
-    themeToggle: '切换主题'
+    themeToggle: '切换主题',
+    themeAuto: '自动',
+    themeDark: '深色',
+    themeLight: '浅色'
   }
 }
 

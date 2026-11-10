@@ -51,26 +51,47 @@ const toggleCategory = (cat: string) => {
 const { locale, t } = useI18n()
 
 // Theme handling
-const isDark = ref(false)
+const themeMode = ref<'auto' | 'dark' | 'light'>('auto')
 
 const initTheme = () => {
-  const saved = localStorage.getItem('theme')
-  if (saved) {
-    isDark.value = saved === 'dark'
+  const saved = localStorage.getItem('theme') as 'auto' | 'dark' | 'light' | null
+  if (saved && ['auto', 'dark', 'light'].includes(saved)) {
+    themeMode.value = saved
   } else {
-    isDark.value = window.matchMedia('(prefers-color-scheme: dark)').matches
+    themeMode.value = 'auto'
   }
-  updateThemeClass()
+  applyTheme()
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    if (themeMode.value === 'auto') {
+      applyTheme()
+    }
+  })
 }
 
 const toggleTheme = () => {
-  isDark.value = !isDark.value
-  localStorage.setItem('theme', isDark.value ? 'dark' : 'light')
-  updateThemeClass()
+  if (themeMode.value === 'auto') {
+    themeMode.value = 'dark'
+  } else if (themeMode.value === 'dark') {
+    themeMode.value = 'light'
+  } else {
+    themeMode.value = 'auto'
+  }
+  localStorage.setItem('theme', themeMode.value)
+  applyTheme()
 }
 
-const updateThemeClass = () => {
-  if (isDark.value) {
+const applyTheme = () => {
+  let isDark = false
+  if (themeMode.value === 'dark') {
+    isDark = true
+  } else if (themeMode.value === 'light') {
+    isDark = false
+  } else {
+    isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+  }
+
+  if (isDark) {
     document.documentElement.classList.add('dark')
   } else {
     document.documentElement.classList.remove('dark')
@@ -167,15 +188,19 @@ const getPlatformName = (p: string) => {
           <button
             @click="toggleTheme"
             class="cursor-pointer p-2 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-300"
-            :title="t('themeToggle')"
+            :title="t('themeToggle') + ' (' + (themeMode === 'auto' ? t('themeAuto') : themeMode === 'dark' ? t('themeDark') : t('themeLight')) + ')'"
           >
-            <!-- Sun icon -->
-            <svg v-if="isDark" class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            <!-- Auto icon -->
+            <svg v-if="themeMode === 'auto'" class="w-4 h-4 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
-            <!-- Moon icon -->
-            <svg v-else class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <!-- Dark / Moon icon -->
+            <svg v-else-if="themeMode === 'dark'" class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+            <!-- Light / Sun icon -->
+            <svg v-else class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
             </svg>
           </button>
         </div>
