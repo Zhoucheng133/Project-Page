@@ -735,7 +735,7 @@
     "platform": [
       "s"
     ],
-    "enabled": true,
+    "enabled": false,
     "type": "service",
     "components": [
       {
@@ -801,6 +801,33 @@
     }
   },
   {
+    "name": "netPlayer Web",
+    "github": "https://github.com/Zhoucheng133/netPlayer-Web",
+    "icon": "/apps/netplayer.svg",
+    "language": [
+      "de-de",
+      "en-us",
+      "es-es",
+      "fr-fr",
+      "jp-jp",
+      "ko-kr",
+      "pt-pt",
+      "ru-ru",
+      "zh-cn",
+      "zh-tw"
+    ],
+    "framework": "Flutter",
+    "platform": [
+      "s"
+    ],
+    "enabled": true,
+    "type": "service",
+    "detail": {
+      "en": "Subsonic & Navidrome based Music Player For PWA",
+      "cn": "基于 Subsonic & Navidrome 的音乐播放器 (PWA)"
+    }
+  },
+  {
     "name": "LocalSocks",
     "github": "https://github.com/Zhoucheng133/LocalSocks",
     "icon": "/apps/localsocks.svg",
@@ -863,7 +890,7 @@
     "platform": [
       "s"
     ],
-    "enabled": true,
+    "enabled": false,
     "type": "service",
     "components": [
       {
@@ -888,7 +915,7 @@
     "platform": [
       "s"
     ],
-    "enabled": true,
+    "enabled": false,
     "type": "service",
     "components": [
       {
