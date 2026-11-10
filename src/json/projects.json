@@ -20,7 +20,7 @@
     "platform": [
       "d"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "application",
     "detail": {
       "en": "Subsonic & Navidrome based Music Player",
@@ -48,7 +48,7 @@
     "platform": [
       "m"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "application",
     "detail": {
       "en": "Subsonic & Navidrome based Music Player For Mobile",
@@ -69,7 +69,7 @@
     "platform": [
       "d"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "application",
     "components": [
       {
@@ -101,7 +101,7 @@
     "platform": [
       "m"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "application",
     "components": [
       {
@@ -134,7 +134,7 @@
     "platform": [
       "d"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "application",
     "components": [
       {
@@ -171,7 +171,7 @@
       "d",
       "m"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "application",
     "detail": {
       "en": "Download Manager For qBittorrent, Aria and Transmission",
@@ -201,7 +201,7 @@
       "d",
       "m"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "application",
     "components": [
       {
@@ -238,7 +238,7 @@
       "d",
       "m"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "application",
     "components": [
       {
@@ -266,7 +266,7 @@
     "platform": [
       "d"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "application",
     "components": [
       {
@@ -294,7 +294,7 @@
     "platform": [
       "d"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "application",
     "components": [
       {
@@ -319,7 +319,7 @@
     "platform": [
       "d"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "application",
     "detail": {
       "en": "Music Download Tool",
@@ -337,7 +337,7 @@
     "platform": [
       "d"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "application",
     "components": [
       {
@@ -362,7 +362,7 @@
     "platform": [
       "d"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "application",
     "components": [
       {
@@ -392,7 +392,7 @@
     "platform": [
       "d"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "application",
     "components": [
       {
@@ -419,7 +419,7 @@
     "platform": [
       "m"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "application",
     "detail": {
       "en": "Loop an Audio",
@@ -439,7 +439,7 @@
     "platform": [
       "m"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "application",
     "detail": {
       "en": "A GPS Tool",
@@ -457,7 +457,7 @@
     "platform": [
       "d"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "application",
     "detail": {
       "en": "Deface GUI Helper",
@@ -475,7 +475,7 @@
     "platform": [
       "d"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "application",
     "detail": {
       "en": "Whisper GUI Helper",
@@ -494,7 +494,7 @@
     "platform": [
       "d"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "application",
     "components": [
       {
@@ -521,7 +521,7 @@
     "platform": [
       "d"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "application",
     "msstore": "https://apps.microsoft.com/detail/9ppfngbt79dv",
     "components": [
@@ -549,7 +549,7 @@
     "platform": [
       "d"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "application",
     "detail": {
       "en": "Multi Subtitles Burning Tool",
@@ -567,7 +567,7 @@
     "platform": [
       "d"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "application",
     "detail": {
       "en": "pyftpdlib GUI Helper",
@@ -587,7 +587,7 @@
     "platform": [
       "d"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "application",
     "detail": {
       "en": "FFmpeg GUI Helper",
@@ -605,7 +605,7 @@
     "platform": [
       "d"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "application",
     "detail": {
       "en": "OpenAPI Client",
@@ -623,7 +623,7 @@
     "platform": [
       "d"
     ],
-    "enabled": false,
+    "deprecated": true,
     "type": "application",
     "components": [
       {
@@ -649,7 +649,7 @@
       "d",
       "m"
     ],
-    "enabled": false,
+    "deprecated": true,
     "type": "application",
     "components": [
       {
@@ -674,7 +674,7 @@
     "platform": [
       "d"
     ],
-    "enabled": false,
+    "deprecated": true,
     "type": "application",
     "detail": {
       "en": "[Merge to Anime Helper]",
@@ -692,7 +692,7 @@
     "platform": [
       "d"
     ],
-    "enabled": false,
+    "deprecated": true,
     "type": "application",
     "detail": {
       "en": "[Split to Sharer and DAV Server]",
@@ -710,7 +710,7 @@
     "platform": [
       "s"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "service",
     "components": [
       {
@@ -735,7 +735,7 @@
     "platform": [
       "s"
     ],
-    "enabled": false,
+    "deprecated": true,
     "type": "service",
     "components": [
       {
@@ -761,7 +761,7 @@
     "platform": [
       "s"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "service",
     "components": [
       {
@@ -786,7 +786,7 @@
     "platform": [
       "s"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "service",
     "components": [
       {
@@ -820,7 +820,7 @@
     "platform": [
       "s"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "service",
     "detail": {
       "en": "Subsonic & Navidrome based Music Player For PWA",
@@ -839,7 +839,7 @@
     "platform": [
       "s"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "service",
     "components": [
       {
@@ -865,7 +865,7 @@
     "platform": [
       "s"
     ],
-    "enabled": true,
+    "deprecated": false,
     "type": "service",
     "components": [
       {
@@ -890,7 +890,7 @@
     "platform": [
       "s"
     ],
-    "enabled": false,
+    "deprecated": true,
     "type": "service",
     "components": [
       {
@@ -915,7 +915,7 @@
     "platform": [
       "s"
     ],
-    "enabled": false,
+    "deprecated": true,
     "type": "service",
     "components": [
       {
@@ -940,7 +940,7 @@
     "platform": [
       "s"
     ],
-    "enabled": false,
+    "deprecated": true,
     "type": "service",
     "components": [
       {
@@ -965,7 +965,7 @@
     "platform": [
       "s"
     ],
-    "enabled": false,
+    "deprecated": true,
     "type": "service",
     "components": [
       {
@@ -988,7 +988,7 @@
     ],
     "framework": "JavaScript",
     "platform": [],
-    "enabled": true,
+    "deprecated": false,
     "type": "script",
     "detail": {
       "en": "Tampermonkey Script that Add Task to Aria",
@@ -1004,7 +1004,7 @@
     ],
     "framework": "JavaScript",
     "platform": [],
-    "enabled": true,
+    "deprecated": false,
     "type": "script",
     "detail": {
       "en": "Tampermonkey Script that Add Task to qBit",
@@ -1020,7 +1020,7 @@
     ],
     "framework": "Gin & Vue",
     "platform": [],
-    "enabled": true,
+    "deprecated": false,
     "type": "script",
     "detail": {
       "en": "netPlayer OBS Live Background",

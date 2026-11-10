@@ -19,7 +19,7 @@ interface Project {
   framework: string
   platform: ('d' | 'm' | 's')[]
   components?: ComponentItem[]
-  enabled?: boolean
+  deprecated?: boolean
   type: 'application' | 'service' | 'script'
   detail: {
     en: string
@@ -27,8 +27,11 @@ interface Project {
   }
 }
 
-const getProjectsByType = (type: string) => {
-  return filteredProjects.value.filter(p => p.type === type)
+const getProjectsByCategory = (cat: string) => {
+  if (cat === 'deprecated') {
+    return filteredProjects.value.filter(p => p.deprecated === true)
+  }
+  return filteredProjects.value.filter(p => p.type === cat && !p.deprecated)
 }
 
 const projects = ref<Project[]>(projectsData as Project[])
@@ -248,26 +251,26 @@ const getPlatformName = (p: string) => {
 
       <!-- Projects Categorized Sections -->
       <div v-if="filteredProjects.length > 0" class="space-y-12">
-        <template v-for="cat in ['application', 'service', 'script']" :key="cat">
-          <div v-if="getProjectsByType(cat).length > 0" class="space-y-6">
+        <template v-for="cat in ['application', 'service', 'script', 'deprecated']" :key="cat">
+          <div v-if="getProjectsByCategory(cat).length > 0" class="space-y-6">
             <!-- Category Header -->
             <div class="flex items-center space-x-3 border-b border-slate-200 dark:border-slate-800 pb-3">
               <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100 capitalize">
                 {{ t(cat) }}
               </h2>
               <span class="px-2.5 py-0.5 text-xs font-medium rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
-                {{ getProjectsByType(cat).length }}
+                {{ getProjectsByCategory(cat).length }}
               </span>
             </div>
 
             <!-- Category Projects Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div
-                v-for="(project, index) in getProjectsByType(cat)"
+                v-for="(project, index) in getProjectsByCategory(cat)"
                 :key="index"
                 :class="[
                   'bg-white dark:bg-slate-900 rounded-2xl border p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group',
-                  project.enabled === false
+                  project.deprecated === true
                     ? 'opacity-70 border-dashed border-slate-300 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/40'
                     : 'border-slate-200 dark:border-slate-800'
                 ]"
@@ -286,7 +289,7 @@ const getPlatformName = (p: string) => {
                         <h3
                           :class="[
                             'text-base font-semibold transition-colors',
-                            project.enabled === false
+                            project.deprecated === true
                               ? 'line-through text-slate-500 dark:text-slate-400'
                               : 'text-slate-900 dark:text-slate-100'
                           ]"
