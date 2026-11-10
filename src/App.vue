@@ -37,6 +37,16 @@ const getProjectsByCategory = (cat: string) => {
 const projects = ref<Project[]>(projectsData as Project[])
 const searchQuery = ref('')
 const selectedPlatform = ref<string>('all')
+const collapsedCategories = ref<Record<string, boolean>>({
+  deprecated: true,
+  application: false,
+  service: false,
+  script: false
+})
+
+const toggleCategory = (cat: string) => {
+  collapsedCategories.value[cat] = !collapsedCategories.value[cat]
+}
 
 const { locale, t } = useI18n()
 
@@ -254,17 +264,29 @@ const getPlatformName = (p: string) => {
         <template v-for="cat in ['application', 'service', 'script', 'deprecated']" :key="cat">
           <div v-if="getProjectsByCategory(cat).length > 0" class="space-y-6">
             <!-- Category Header -->
-            <div class="flex items-center space-x-3 border-b border-slate-200 dark:border-slate-800 pb-3">
+            <div
+              @click="toggleCategory(cat)"
+              class="flex items-center space-x-3 border-b border-slate-200 dark:border-slate-800 pb-3 cursor-pointer select-none hover:opacity-80 transition-opacity"
+            >
               <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100 capitalize">
                 {{ t(cat) }}
               </h2>
               <span class="px-2.5 py-0.5 text-xs font-medium rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
                 {{ getProjectsByCategory(cat).length }}
               </span>
+              <svg
+                class="w-5 h-5 ml-auto text-slate-500 transition-transform duration-200"
+                :class="{ 'rotate-180': !collapsedCategories[cat] }"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
             </div>
 
             <!-- Category Projects Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div v-show="!collapsedCategories[cat]" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div
                 v-for="(project, index) in getProjectsByCategory(cat)"
                 :key="index"
